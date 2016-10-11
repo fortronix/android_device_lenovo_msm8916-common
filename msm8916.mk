@@ -152,10 +152,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #perf.mk
 # Properties
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.dex2oat_thread_count=4
-endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.max_starting_bg=8 \
@@ -262,10 +260,8 @@ PRODUCT_PACKAGES += \
     memtrack.msm8916
 
 # Permissions
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
-endif
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -275,15 +271,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.ptor.enable=true \
     debug.enable.sglscale=1
 
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8916)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
-else
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196609
-endif
-endif
 
 #qcom-fm.mk
 # FM
@@ -362,16 +351,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8916)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.min_freq_0=800000
-else
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.min_freq_0=960000 \
     ro.min_freq_4=800000
-endif
-endif
 
 #qcom-radio.mk
 # Properties

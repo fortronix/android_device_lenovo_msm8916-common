@@ -426,16 +426,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
-#recovery.mk
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_cm
-
-#sensors.mk
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hal.conf
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \

@@ -1,0 +1,2 @@
+allow time_daemon persist_file:file read;
+allow time_daemon persist_file:file open;

@@ -1,6 +1,4 @@
 allow init debugfs:dir mounton;
-allow init mmcblk0p1:dir mounton;
 allow init sdcardd_exec:file execute;
 allow init sdcardd_exec:file execute_no_trans;
-allow init sdcardd_exec:file read open;
 allow init sdcardd_exec:file execute;
